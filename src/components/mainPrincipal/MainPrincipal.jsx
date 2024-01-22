@@ -4,6 +4,7 @@ import { PRODUCTS } from '../../constants/products';
 import Filters from '../filters/Filters';
 import FilterPlatform from '../filterPlatform/FilterPlatform';
 import SortByDropdown from '../sortByDropdown/sortByDropdown';
+import { StyledMain } from './styles';
 
 
 const MainPrincipal = () => {
@@ -11,14 +12,16 @@ const MainPrincipal = () => {
     const [sortBy, setSortBy] = useState('');
   
     return (
-      <div>
-        <FilterPlatform
-          filterPlatform={filterPlatform}
-          setFilterPlatform={setFilterPlatform}
-        />
-        <SortByDropdown sortBy={sortBy} setSortBy={setSortBy} />
+      <StyledMain>
+        <div>
+          <FilterPlatform
+            filterPlatform={filterPlatform}
+            setFilterPlatform={setFilterPlatform}
+          />
+          <SortByDropdown sortBy={sortBy} setSortBy={setSortBy} />
+        </div>
         <ProductList products={Filters(PRODUCTS, filterPlatform, sortBy)} />
-      </div>
+      </StyledMain>
     );
   };
   

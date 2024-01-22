@@ -1,6 +1,7 @@
 
+
 const Filters = (products, filterPlatform, sortBy) => {
-  let filteredProducts = [...products]; // Hacemos una copia para no modificar el array original
+  let filteredProducts = [...products]; 
 
   if (filterPlatform.length > 0) {
     filteredProducts = filteredProducts.filter(product =>
