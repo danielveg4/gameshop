@@ -13,7 +13,7 @@ const FilterPlatform = ({ filterPlatform, setFilterPlatform }) => {
 
   return (
     <div>
-      <h2>Platform Filter</h2>
+      <h2>Platform</h2>
       {platforms.map(platform => (
         <label key={platform}>
           <input
