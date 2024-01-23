@@ -3,15 +3,15 @@ import { PRODUCTS } from "../../constants/products";
 const FilterPlatform = ({ filterPlatform, setFilterPlatform }) => {
   const allPlatforms = [];
 
-  for (const product of PRODUCTS) {
-    for (const platform of product.platforms) {
+  PRODUCTS.forEach(product => {
+    product.platforms.forEach(platform => {
       const platformName = platform.name;
       if (!allPlatforms.includes(platformName)) {
         allPlatforms.push(platformName);
       }
-    }
-  }
-
+    });
+  });
+  
   const platforms = allPlatforms;
 
   const togglePlatformFilter = platform => {
