@@ -6,6 +6,7 @@ export const StyledHeader = styled.header`
 	justify-content: center;
 	background-color: #282c34;
     height: 10rem;
+	width: 1440px;
 `;
 
 export const StyledTitle = styled.h1`

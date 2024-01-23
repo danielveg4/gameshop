@@ -5,6 +5,7 @@ import Filters from '../filters/Filters';
 import FilterPlatform from '../filterPlatform/FilterPlatform';
 import SortByDropdown from '../sortByDropdown/sortByDropdown';
 import { StyledMain } from './styles';
+import Shop from '../shop/Shop';
 
 
 const MainPrincipal = () => {
@@ -21,6 +22,7 @@ const MainPrincipal = () => {
           <SortByDropdown sortBy={sortBy} setSortBy={setSortBy} />
         </div>
         <ProductList products={Filters(PRODUCTS, filterPlatform, sortBy)} />
+        <Shop />
       </StyledMain>
     );
   };
