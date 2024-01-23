@@ -1,9 +1,7 @@
-
-
 const Filters = (products, filterPlatform, sortBy) => {
-  let filteredProducts = [...products]; 
+  let filteredProducts = [...products];
 
-  if (filterPlatform.length > 0) {
+  if (filterPlatform) {
     filteredProducts = filteredProducts.filter(product =>
       product.platforms.some(platform => filterPlatform.includes(platform.name))
     );
