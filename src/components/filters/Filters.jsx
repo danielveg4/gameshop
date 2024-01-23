@@ -10,7 +10,7 @@ const Filters = (products, filterPlatform, sortBy) => {
   if (sortBy === 'name') {
     filteredProducts = filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
   } else if (sortBy === 'releaseDate') {
-    filteredProducts = filteredProducts.sort((a, b) => a.releaseDate - b.releaseDate);
+    filteredProducts = filteredProducts.sort((a, b) => b.releaseDate - a.releaseDate);
   }
 
   return filteredProducts;
