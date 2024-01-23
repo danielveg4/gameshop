@@ -1,7 +1,18 @@
 import { PRODUCTS } from "../../constants/products";
 
 const FilterPlatform = ({ filterPlatform, setFilterPlatform }) => {
-  const platforms = Array.from(new Set(PRODUCTS.flatMap(product => product.platforms.map(p => p.name))));
+  const allPlatforms = [];
+
+  for (const product of PRODUCTS) {
+    for (const platform of product.platforms) {
+      const platformName = platform.name;
+      if (!allPlatforms.includes(platformName)) {
+        allPlatforms.push(platformName);
+      }
+    }
+  }
+
+  const platforms = allPlatforms;
 
   const togglePlatformFilter = platform => {
     if (filterPlatform.includes(platform)) {
